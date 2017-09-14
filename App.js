@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import WelcomeScreen from './src/WelcomeScreen';
-import MapScreen from './src/MapScreen';
+import WelcomeScreen from './screen/WelcomeScreen';
+import MapScreen from './screen/MapScreen';
+import Locate from './screen/Locate';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 
 const MainNavigator = StackNavigator({

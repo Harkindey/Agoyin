@@ -1,10 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Button, Icon } from 'react-native-elements'
+import { connect } from 'react-redux';
 
-export default class App extends React.Component {
+import * as actions from '../actions';
 
-  
+class WelcomeScreen extends React.Component {
+
+  onButtonPress = () => {
+    this.props._getLocationAsync(() => {
+        this.props.navigation.navigate('map');
+    });
+  }
   
   render() {
     const { navigate } = this.props.navigation;
@@ -24,7 +31,7 @@ export default class App extends React.Component {
             title="Search"
             backgroundColor="red"
             icon={{ name: 'search' }}
-            onPress={() => navigate('map')}
+            onPress={this.onButtonPress}
           />
       </View>
       </View>
@@ -53,3 +60,5 @@ const styles = StyleSheet.create({
         marginTop: 5
       }
 });
+
+export default connect (null, actions)(WelcomeScreen);
