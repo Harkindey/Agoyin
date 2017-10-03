@@ -61,4 +61,4 @@ const styles = StyleSheet.create({
       }
 });
 
-export default connect (null, actions)(WelcomeScreen);
+export default WelcomeScreen;
