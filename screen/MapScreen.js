@@ -44,8 +44,8 @@ export default class App extends Component {
         <MapView
         style={{ flex: 1 }}
         initialRegion={{
-          latitude: 4.528405, 
-          longitude: 7.518072699999999,
+          latitude: this.state.location.coords.latitude, 
+          longitude: this.state.location.coords.longitude,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
